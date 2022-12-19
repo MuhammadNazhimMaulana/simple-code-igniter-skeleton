@@ -61,8 +61,6 @@ RUN usermod -u 1000 www-data
 # Copy existing application directory permissions
 ADD . /var/www/html
 RUN chown -R www-data:www-data /var/www/html
-RUN chmod -R 775 /var/www/html/storage
-RUN chmod -R 777 /var/www/html/storage/logs
 
 # Change current user to www
 USER www-data
