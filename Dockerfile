@@ -46,6 +46,8 @@ RUN docker-php-ext-install bcmath
 RUN docker-php-ext-enable bcmath
 RUN docker-php-ext-install zip
 RUN docker-php-ext-enable zip
+RUN docker-php-ext-install intl
+RUN docker-php-ext-enable intl
 
 # Installing composer
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
