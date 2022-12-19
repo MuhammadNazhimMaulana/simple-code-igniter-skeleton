@@ -37,6 +37,8 @@ curl ca-certificates zip unzip supervisor gcc postgresql-dev gnupg musl-dev make
 # Add and Enable PHP-PDO Extenstions
 RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
 RUN docker-php-ext-enable pdo_mysql pdo_pgsql
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-enable mysqli
 RUN docker-php-ext-install gd
 RUN docker-php-ext-enable gd
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
