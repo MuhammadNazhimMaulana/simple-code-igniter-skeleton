@@ -69,6 +69,5 @@ RUN chown -R www-data:www-data /var/www/html
 # Change current user to www
 USER www-data
 
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
+# Start php-fpm server
 CMD ["php-fpm"]

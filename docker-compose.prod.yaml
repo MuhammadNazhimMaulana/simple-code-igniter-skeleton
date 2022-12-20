@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  bone-ciskeleton:
+    image: docker.io/bonevian/ciskeleton:0.0.1
+    deploy:
+      replicas: 1
+    ports:
+      - "9000:9876"
+    networks:
+      - traefik-front-net
+
+networks:
+  traefik-front-net:
+    name: traefik-front-net
+    driver: overlay
+    external: true
