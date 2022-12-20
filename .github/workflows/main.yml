@@ -1,0 +1,17 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - "master"
+  workflow_call:
+
+jobs:
+  ci:
+    uses: ./.github/workflows/action.yml
+    secrets: inherit
+  
+  build:
+    needs: ci
+    uses: ./.github/workflows/docker-image.yml
+    secrets: inherit
