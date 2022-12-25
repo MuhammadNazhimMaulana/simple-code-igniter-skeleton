@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<?= base_url('bootstrap/css/bootstrap.min.css') ?>">
 </head>
 <body>
+    <!-- Adding Navbar -->
+    <?= $this->include('layout/partials/navbar') ?>
 
     <!-- Section -->
     <div class="container">
@@ -17,6 +19,7 @@
     </div>
 
     <!-- Script -->
-    <script src="<?= base_url('bootstrap/js/bootstrap.min.js') ?>"></script>
+    <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('js/jquery.min.js') ?>"></script>
 </body>
 </html>
