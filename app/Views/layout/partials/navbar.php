@@ -13,7 +13,7 @@
         <a class="nav-link text-light" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" href="#">Items</a>
+        <a class="nav-link text-light" href="/api/item">Items</a>
       </li>
   </div>
 </nav>

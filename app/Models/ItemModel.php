@@ -38,4 +38,14 @@ class ItemModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    // Get All Data
+    public function getItems() {
+        return $this->findAll();
+    }
+
+    // Get All Data
+    public function getItem($id) {
+        return $this->getWhere(['id' => $id]);
+    }
 }

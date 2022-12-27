@@ -41,6 +41,11 @@ $routes->get('/', 'Home::index');
 $routes->group('api', ['namespace' => 'App\Controllers\User', 'filter' => 'auth'], static function ($routes) {
     $routes->get('user', 'UserController::index');
     $routes->get('user/:any', 'UserController::profile/$1');
+
+    // Item
+    $routes->group('item', static function ($routes) {
+        $routes->get('/', 'ItemController::index');
+    });
 });
 
 $routes->group('auth', ['namespace' => 'App\Controllers\Auth'], static function ($routes) {
