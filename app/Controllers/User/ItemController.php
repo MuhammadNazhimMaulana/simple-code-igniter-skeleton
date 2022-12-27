@@ -26,6 +26,9 @@ class ItemController extends BaseController
 
     public function create()
     {
+        // Session
+		$session = session();
+
         // Validation
         $validation = $this->validate([
             'item_name' => [
@@ -42,7 +45,7 @@ class ItemController extends BaseController
             // Prepare Inserted Data
             $data = [
 				'item_name' => $this->request->getPost('item_name'),
-				'user_id' => 1
+				'user_id' => $session->get('user_id')
         	];
 
             // Save The Data
