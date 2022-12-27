@@ -17,9 +17,12 @@
     <div class="container">
         <?= $this->renderSection('content') ?>
     </div>
-
+    
     <!-- Script -->
     <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('js/jquery.min.js') ?>"></script>
+
+    <!-- For Adding Custom JS -->
+    <?= $this->renderSection('script') ?>
 </body>
 </html>

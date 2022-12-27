@@ -38,13 +38,14 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 // Custom Route
-$routes->group('api', ['namespace' => 'App\Controllers\User', 'filter' => 'auth'], static function ($routes) {
+$routes->group('api', ['namespace' => 'App\Controllers\User'], static function ($routes) {
     $routes->get('user', 'UserController::index');
     $routes->get('user/:any', 'UserController::profile/$1');
 
     // Item
     $routes->group('item', static function ($routes) {
         $routes->get('/', 'ItemController::index');
+        $routes->post('create', 'ItemController::create');
     });
 });
 

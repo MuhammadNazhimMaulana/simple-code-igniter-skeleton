@@ -48,4 +48,11 @@ class ItemModel extends Model
     public function getItem($id) {
         return $this->getWhere(['id' => $id]);
     }
+
+    // Save Item
+    public function save_item(array $data){
+        $query = $this->db->table($this->table)
+                ->insert($data);
+        return $query;
+    }
 }

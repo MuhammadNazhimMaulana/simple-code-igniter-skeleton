@@ -12,7 +12,7 @@
         </button>
     </div>
 
-    <table class="table text-center">
+    <table class="table text-center" id="items-table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -39,5 +39,10 @@
 
 <!-- Adding Modals -->
 <?= $this->include('item/modals/create') ?>
+
+<!-- Script -->
+<?= $this->section('script') ?>
+    <script src="<?= base_url('js/items.js') ?>"></script>
+<?= $this->endSection() ?>
 
 <?= $this->endSection() ?>
